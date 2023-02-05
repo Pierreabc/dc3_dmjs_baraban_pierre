@@ -1,12 +1,19 @@
-let array = [9, 13, 1, 26, 90, 22, 597, 372]
-const lepluslong = (array) => {
-    var long = array[0];
+function valmax(tableau){
+let valeurpremiere = 0;
+let valeurdeuxieme = 0;
 
-    for (var i = 0; i < array.length; i++) {
-        if (long < array[i] ) {
-            long = array[i];
-        }
+for(let i = 0;  i < tableau.length; i++){
+    if(tableau[i] > valeurpremiere){
+        valeurdeuxieme = valeurpremiere;
+        valeurpremiere = tableau[i];
     }
-    return long
+    else if (tableau[i] > valeurdeuxieme && tableau[i] < valeurpremiere){
+        valeurdeuxieme = tableau[i]
+    }
 }
-console.log(lepluslong(array))
+return[valeurpremiere, valeurdeuxieme];
+}
+
+let number = [90,4,5,6,7,8,9];
+
+console.log(valmax(number));
