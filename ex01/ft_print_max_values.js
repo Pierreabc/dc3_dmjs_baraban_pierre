@@ -9,4 +9,4 @@ const lepluslong = (array) => {
     }
     return long
 }
-console.log(lepluslong(array));
+console.log(lepluslong(array))
